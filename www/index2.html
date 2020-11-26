@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../www/css/estilo2.css">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+    <form>
+        <label>Nome</label>
+        <input id="nome" type="text">
+
+        <label for="data"> Data : </label>
+        <input id="data" type="date" /><br>
+        <label for="hora"> Hora : </label>
+        <input id="hora" type="time" /><br>
+        <input id="total" type="hidden" value="" />
+        <footer>
+
+            <button id="btn-finalizar" class="finalizar">finalizar
+               <!--<a href="../www/index2.html">proximo</a>-->
+        </button>
+
+    </form>
+
+    <footer>
+        <a href="../www/index.html">
+            voltar
+        </a>
+    </footer>
+    <script>
+        let soma = (new URL(location)).searchParams.get('soma');
+        document.getElementById('total').value = soma;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts/somarValores.js"></script>
+</body>
+
+</html>
