@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../www/css/style.css">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div>
+        Cadastro efetuado com sucesso!
+    </div>
+    <div class="container">
+        <strong>Nome: </strong><span id="nome"></span>
+        <strong>Data: </strong><span id="data"></span>
+        <strong>Hora: </strong><span id="hora"></span>
+        <strong>Total: </strong>R$ <span id="total"></span>
+    </div>
+
+    <footer>
+        <a href="../www/index.html">
+            voltar
+        </a>
+    </footer>
+    <script>
+        const url = new URL(location);
+        const nome = url.searchParams.get('nome');
+        const data = url.searchParams.get('data');
+        const hora = url.searchParams.get('hora');
+        const total = url.searchParams.get('total');
+
+        document.getElementById('nome').innerText = nome;
+        document.getElementById('data').innerText = data;
+        document.getElementById('hora').innerText = hora;
+        document.getElementById('total').innerText = total;
+    </script>
+</body>
+
+</html>
